@@ -1,0 +1,1 @@
+import{a as e,i as t,t as n}from"./utils-DYfe2Ugs.js";e();var r=t();function i({className:e,...t}){return(0,r.jsx)(`div`,{className:n(`rounded-xl bg-surface p-4 text-fg shadow-[var(--shadow-border)]`,e),...t})}export{i as t};

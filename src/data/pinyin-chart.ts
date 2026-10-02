@@ -1,0 +1,92 @@
+export type ChartGroup = {
+  id: string;
+  title: string;
+  finals: string[];
+  rows: { initial: string; cells: (string | null)[] }[];
+};
+
+export const PINYIN_CHART: ChartGroup[] = [
+  {
+    id: "open",
+    title: "Open finals",
+    finals: ["a", "o", "e", "ai", "ei", "ao", "ou", "an", "en", "ang", "eng", "ong"],
+    rows: [
+      { initial: "∅", cells: ["a", "o", "e", "ai", "ei", "ao", "ou", "an", "en", "ang", "eng", null] },
+      { initial: "b", cells: ["ba", "bo", null, "bai", "bei", "bao", null, "ban", "ben", "bang", "beng", null] },
+      { initial: "p", cells: ["pa", "po", null, "pai", "pei", "pao", "pou", "pan", "pen", "pang", "peng", null] },
+      { initial: "m", cells: ["ma", "mo", "me", "mai", "mei", "mao", "mou", "man", "men", "mang", "meng", null] },
+      { initial: "f", cells: ["fa", "fo", null, null, "fei", null, "fou", "fan", "fen", "fang", "feng", null] },
+      { initial: "d", cells: ["da", null, "de", "dai", "dei", "dao", "dou", "dan", "den", "dang", "deng", "dong"] },
+      { initial: "t", cells: ["ta", null, "te", "tai", null, "tao", "tou", "tan", null, "tang", "teng", "tong"] },
+      { initial: "n", cells: ["na", null, "ne", "nai", "nei", "nao", "nou", "nan", "nen", "nang", "neng", "nong"] },
+      { initial: "l", cells: ["la", "lo", "le", "lai", "lei", "lao", "lou", "lan", null, "lang", "leng", "long"] },
+      { initial: "g", cells: ["ga", null, "ge", "gai", "gei", "gao", "gou", "gan", "gen", "gang", "geng", "gong"] },
+      { initial: "k", cells: ["ka", null, "ke", "kai", null, "kao", "kou", "kan", "ken", "kang", "keng", "kong"] },
+      { initial: "h", cells: ["ha", null, "he", "hai", "hei", "hao", "hou", "han", "hen", "hang", "heng", "hong"] },
+      { initial: "zh", cells: ["zha", null, "zhe", "zhai", "zhei", "zhao", "zhou", "zhan", "zhen", "zhang", "zheng", "zhong"] },
+      { initial: "ch", cells: ["cha", null, "che", "chai", null, "chao", "chou", "chan", "chen", "chang", "cheng", "chong"] },
+      { initial: "sh", cells: ["sha", null, "she", "shai", "shei", "shao", "shou", "shan", "shen", "shang", "sheng", null] },
+      { initial: "r", cells: [null, null, "re", null, null, "rao", "rou", "ran", "ren", "rang", "reng", "rong"] },
+      { initial: "z", cells: ["za", null, "ze", "zai", "zei", "zao", "zou", "zan", "zen", "zang", "zeng", "zong"] },
+      { initial: "c", cells: ["ca", null, "ce", "cai", null, "cao", "cou", "can", "cen", "cang", "ceng", "cong"] },
+      { initial: "s", cells: ["sa", null, "se", "sai", null, "sao", "sou", "san", "sen", "sang", "seng", "song"] },
+    ],
+  },
+  {
+    id: "i",
+    title: "i finals",
+    finals: ["i", "ia", "iao", "ie", "iu", "ian", "in", "iang", "ing", "iong"],
+    rows: [
+      { initial: "∅", cells: ["yi", "ya", "yao", "ye", "you", "yan", "yin", "yang", "ying", "yong"] },
+      { initial: "b", cells: ["bi", null, "biao", "bie", null, "bian", "bin", null, "bing", null] },
+      { initial: "p", cells: ["pi", null, "piao", "pie", null, "pian", "pin", null, "ping", null] },
+      { initial: "m", cells: ["mi", null, "miao", "mie", "miu", "mian", "min", null, "ming", null] },
+      { initial: "d", cells: ["di", "dia", "diao", "die", "diu", "dian", null, null, "ding", null] },
+      { initial: "t", cells: ["ti", null, "tiao", "tie", null, "tian", null, null, "ting", null] },
+      { initial: "n", cells: ["ni", null, "niao", "nie", "niu", "nian", "nin", "niang", "ning", null] },
+      { initial: "l", cells: ["li", "lia", "liao", "lie", "liu", "lian", "lin", "liang", "ling", null] },
+      { initial: "j", cells: ["ji", "jia", "jiao", "jie", "jiu", "jian", "jin", "jiang", "jing", "jiong"] },
+      { initial: "q", cells: ["qi", "qia", "qiao", "qie", "qiu", "qian", "qin", "qiang", "qing", "qiong"] },
+      { initial: "x", cells: ["xi", "xia", "xiao", "xie", "xiu", "xian", "xin", "xiang", "xing", "xiong"] },
+    ],
+  },
+  {
+    id: "u",
+    title: "u finals",
+    finals: ["u", "ua", "uo", "uai", "ui", "uan", "un", "uang"],
+    rows: [
+      { initial: "∅", cells: ["wu", "wa", "wo", "wai", "wei", "wan", "wen", "wang"] },
+      { initial: "b", cells: ["bu", null, null, null, null, null, null, null] },
+      { initial: "p", cells: ["pu", null, null, null, null, null, null, null] },
+      { initial: "m", cells: ["mu", null, null, null, null, null, null, null] },
+      { initial: "f", cells: ["fu", null, null, null, null, null, null, null] },
+      { initial: "d", cells: ["du", null, "duo", null, "dui", "duan", "dun", null] },
+      { initial: "t", cells: ["tu", null, "tuo", null, "tui", "tuan", "tun", null] },
+      { initial: "n", cells: ["nu", null, "nuo", null, null, "nuan", "nun", null] },
+      { initial: "l", cells: ["lu", null, "luo", null, null, "luan", "lun", null] },
+      { initial: "g", cells: ["gu", "gua", "guo", "guai", "gui", "guan", "gun", "guang"] },
+      { initial: "k", cells: ["ku", "kua", "kuo", "kuai", "kui", "kuan", "kun", "kuang"] },
+      { initial: "h", cells: ["hu", "hua", "huo", "huai", "hui", "huan", "hun", "huang"] },
+      { initial: "zh", cells: ["zhu", "zhua", "zhuo", "zhuai", "zhui", "zhuan", "zhun", "zhuang"] },
+      { initial: "ch", cells: ["chu", "chua", "chuo", "chuai", "chui", "chuan", "chun", "chuang"] },
+      { initial: "sh", cells: ["shu", "shua", "shuo", "shuai", "shui", "shuan", "shun", "shuang"] },
+      { initial: "r", cells: ["ru", "rua", "ruo", null, "rui", "ruan", "run", null] },
+      { initial: "z", cells: ["zu", null, "zuo", null, "zui", "zuan", "zun", null] },
+      { initial: "c", cells: ["cu", null, "cuo", null, "cui", "cuan", "cun", null] },
+      { initial: "s", cells: ["su", null, "suo", null, "sui", "suan", "sun", null] },
+    ],
+  },
+  {
+    id: "v",
+    title: "ü finals",
+    finals: ["ü", "üe", "üan", "ün"],
+    rows: [
+      { initial: "∅", cells: ["yu", "yue", "yuan", "yun"] },
+      { initial: "n", cells: ["nü", "nüe", null, null] },
+      { initial: "l", cells: ["lü", "lüe", null, null] },
+      { initial: "j", cells: ["ju", "jue", "juan", "jun"] },
+      { initial: "q", cells: ["qu", "que", "quan", "qun"] },
+      { initial: "x", cells: ["xu", "xue", "xuan", "xun"] },
+    ],
+  },
+];

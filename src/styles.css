@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Noto Sans",
+    system-ui, sans-serif;
+  --font-display: "Noto Serif SC", "Songti SC", "Noto Serif", Georgia, serif;
+  --font-serif: "Noto Serif SC", "Songti SC", "Noto Serif", Georgia, serif;
+
+  --color-bg: #12100e;
+  --color-bg-elevated: #1c1916;
+  --color-surface: #231e1a;
+  --color-paper: #f3ebe0;
+  --color-ink: #1a1410;
+  --color-fg: #f3ebe0;
+  --color-muted: #a89884;
+  --color-subtle: #7a6d5d;
+  --color-primary: #c23a2b;
+  --color-primary-fg: #f3ebe0;
+  --color-border: rgb(243 235 224 / 0.12);
+  --color-border-strong: rgb(243 235 224 / 0.22);
+  --color-success: #6b9e7a;
+  --color-warn: #c4a35a;
+  --color-ring: #c23a2b;
+  --color-background: #12100e;
+  --color-foreground: #f3ebe0;
+  --color-card: #231e1a;
+  --color-card-foreground: #f3ebe0;
+  --color-muted-foreground: #a89884;
+  --color-accent: #c23a2b;
+  --color-accent-foreground: #f3ebe0;
+  --color-destructive: #c23a2b;
+  --color-input: rgb(243 235 224 / 0.12);
+  --color-popover: #1c1916;
+  --color-popover-foreground: #f3ebe0;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+
+  --shadow-border: 0 0 0 1px rgb(243 235 224 / 0.08);
+  --shadow-border-hover: 0 0 0 1px rgb(243 235 224 / 0.14);
+  --shadow-lift: 0 0 0 1px rgb(243 235 224 / 0.08), 0 18px 40px -24px rgb(0 0 0 / 0.55);
+
+  --ease-out-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    min-height: 100dvh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-primary) 40%, transparent);
+    color: var(--color-fg);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .grain {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.08  0 0 0 0 0.06  0 0 0 0 0.04  0 0 0 0.18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    background-repeat: repeat;
+    pointer-events: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

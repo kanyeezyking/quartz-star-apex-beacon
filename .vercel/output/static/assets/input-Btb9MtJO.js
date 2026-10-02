@@ -1,0 +1,1 @@
+import{a as e,i as t,t as n}from"./utils-DYfe2Ugs.js";e();var r=t();function i({className:e,...t}){return(0,r.jsx)(`input`,{className:n(`flex h-11 w-full rounded-md bg-bg-elevated px-3 text-base text-fg shadow-[var(--shadow-border)] outline-none placeholder:text-subtle focus-visible:ring-2 focus-visible:ring-ring/70`,e),...t})}export{i as t};
